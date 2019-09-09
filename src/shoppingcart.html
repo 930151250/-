@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物车页面</title>
+    <link rel="stylesheet" href="./css/shopping.css">
+    <link rel="stylesheet" href="./css/product.css">
+    <style>
+        .sc-pro-list {
+            background: #fff;
+            padding-left: 40px;
+            margin-top: 10px;
+            padding-top: 20px;
+        }
+        
+        .sc-pro-list>label {
+            float: left;
+            margin: 43px 3px 0 0;
+        }
+        
+        .checkbox input.checked {
+            background-position: 0 -129px;
+        }
+        
+        .sc-pro-area {
+            float: left;
+            width: 1130px;
+            font-size: 14px;
+        }
+        
+        .sc-pro-area a.p-name {
+            display: block;
+            position: relative;
+            max-height: 42px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .sc-pro-main {
+            margin-bottom: 18px;
+            position: relative;
+        }
+        
+        .sc-pro-area .p-img {
+            width: 100px;
+            height: 100px;
+            float: left;
+            margin-right: 20px;
+            position: relative;
+        }
+        
+        .sc-pro-area .p-img img {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .sc-pro-list ul,
+        .sc-pro-title ul {
+            float: left;
+        }
+        
+        .sc-pro-list li,
+        .sc-pro-title li {
+            float: left;
+            width: 100px;
+            margin-left: 30px;
+            min-height: 14px;
+            text-align: center;
+        }
+        
+        .sc-pro-list li:first-child,
+        .sc-pro-title li:first-child {
+            width: 450px;
+            text-align: left;
+            margin-left: 0;
+        }
+        
+        .sc-pro-list li:nth-child(2) {
+            width: 140px;
+            margin-left: 10px;
+            margin-right: -20px;
+        }
+        
+        .sc-pro-area .p-price-total {
+            color: #ca141d;
+            font-weight: 700;
+        }
+        
+        .sc-pro-main a.p-name {
+            margin-bottom: 6px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+        }
+        
+        .sc-pro-area .p-price span {
+            display: block;
+            margin-bottom: 3px;
+        }
+        
+        .p-stock {
+            text-align: center;
+        }
+        
+        .p-stock-area {
+            display: block;
+            border: 1px solid #d6d6d6;
+            width: 86px;
+            margin: 0 auto;
+            height: 20px;
+            border-radius: 2px;
+            position: relative;
+        }
+        
+        .p-stock-area .p-stock-text {
+            width: 42px;
+            height: 20px;
+            position: absolute;
+            top: 0;
+            left: 22px;
+            text-align: center;
+            border: 1px solid #d6d6d6;
+            border-bottom: none;
+            border-top: none;
+            z-index: 1;
+        }
+        
+        .p-stock-area .p-stock-btn {
+            width: 86px;
+            position: absolute;
+            top: 1px;
+            left: 1px;
+        }
+        
+        .p-stock-area .p-stock-btn a {
+            width: 21px;
+            height: 20px;
+            line-height: 19px;
+            float: left;
+            font-size: 16px;
+            text-align: center;
+            color: #717171;
+        }
+        
+        .p-stock-area .p-stock-btn a.disabled {
+            color: #d6d6d6;
+            cursor: not-allowed;
+        }
+        
+        .p-stock-area .p-stock-btn a:last-child {
+            float: right;
+        }
+    </style>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/cookie.js"></script>
+
+</head>
+
+<body>
+    <div id="app">
+        <div class="sc">
+            <div class="shortcut">
+                <div class="layout">
+                    <div class="s-sub">
+                        <ul>
+                            <li><a href="">首页</a></li>
+                            <li><a href="">华为官网</a></li>
+                            <li><a href="">荣耀官网</a></li>
+                            <li><a href="">花粉俱乐部</a></li>
+                            <li><a href="">V码(优购码)</a></li>
+                            <li><a href="">企业购</a></li>
+                            <li><a href="">Select Region</a></li>
+                            <li>
+                                <div class="s-dropdown">
+                                    <div class="h">
+                                        <a href="" class="icon-dropdown">更多精彩</a>
+                                    </div>
+                                    <div class="b">
+                                        <div class="dropdown-more w-119">
+                                            <dl>
+                                                <dt><a href="">EMUI</a></dt>
+                                                <dt><a href="">应用市场</a></dt>
+                                                <dt><a href="">华为终端云空间</a></dt>
+                                                <dt><a href="">开发者联盟</a></dt>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="s-main ">
+                        <ul>
+                            <li id="unlogin_status">
+                                <div class="header-toolbar">
+                                    <div class="header-toolbar-item">
+                                        <div class="i-login">
+                                            <div class="h">
+                                                <a href="" id="top-index-loginUrl">请登录</a>
+                                                <a href="">注册</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="login_status" class="hide"></li>
+                            <li><a href="">我的订单</a></li>
+                            <li>
+                                <div class="s-dropdown s-dropdown-link">
+                                    <div class="h">
+                                        <a href="" class="icon-dropdown">客户服务</a>
+                                    </div>
+                                    <div class="b">
+                                        <div class="dropdown-more">
+                                            <dl>
+                                                <dt><a href="">服务中心</a></dt>
+                                                <dt><a href="">联系客服</a></dt>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="s-dropdown">
+                                    <div class="h">
+                                        <a href="#" class="icon-dropdown">网站导航</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="downloadApp">
+                                <div class="s-dropdown">
+                                    <div class="h">
+                                        <a href="#" class="icon-dropdown">手机版</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="s-dropdown s-dropdown-minicart">
+                                    <div class="h h-wide" id="header-toolbar-minicart">
+                                        <a href="#" class="icon-minicart">
+                                            <span>
+                                                        购物车(
+                                                    <span id="header-cart-total">0</span>)
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                    </div>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header order-header">
+                <div class="layout">
+                    <div class="left">
+                        <div class="logo logo-word">
+                            <a href=""><img src="https://res.vmallres.com/pimages//sale/2019-01/AF2GXbxrWmRqvyNfYzCl.png" alt=""></a>
+                            <span>我的购物车</span>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="progress-area progress-area-3">
+                            <div id="progress-cart" class="progress-sc-area">我的购物车</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layout">
+                <div class="hr-20"></div>
+                <div class="sc-list">
+                    <div class="sc-pro-title clearfix">
+                        <label for="" class="checkbox">
+                            <input type="checkbox" class="vam checkall">全选
+                        </label>
+                        <ul class="clearfix">
+                            <li>商品</li>
+                            <li>单价</li>
+                            <li>数量</li>
+                            <li>小计</li>
+                            <li>操作</li>
+                        </ul>
+                    </div>
+                    <form action="">
+                        <div class="sc-pro">
+                            <script>
+                                var shop = cookie.get('shop');
+                                if (shop) {
+                                    shop = JSON.parse(shop);
+                                    var idList = shop.map(elm => elm.sid).join()
+                                    $.ajax({
+                                        type: "get",
+                                        url: "./lib/shop.php",
+                                        data: {
+                                            "idList": idList
+                                        },
+                                        dataType: "json",
+                                        success: function(res) {
+                                            res.forEach((elm, i) => {
+                                                var pic = JSON.parse(elm.pic);
+                                                var arr = shop.filter((val, i) => {
+                                                    return val.sid === elm.sid;
+                                                });
+                                                var template = `
+                                                <div class="sc-pro-list clearfix">
+                                                    <label for="" class="checkbox">
+                                                        <input type="checkbox" class="vam mav" value="${((arr[0].num*elm.grid_price).toFixed(2))}">
+                                                    </label>
+                                                    <div class="sc-pro-area">
+                                                        <div class="sc-pro-main clearfix">
+                                                            <a href="javascript:;" class="p-img">
+                                                                <img src=".${pic[0].src}" alt="">
+                                                            </a>
+                                                            <ul>
+                                                                <li>
+                                                                    <a href="javascript:;" title=" " class="p-name">
+                                                                            ${elm.grid_title}
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="p-price">
+                                                                        <span>￥&nbsp;${elm.grid_price}</span>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="p-stock">
+                                                                        <div class="p-stock-area">
+                                                                            <input type="number" class="p-stock-text" min="1" value="${arr[0].num}" max="${elm.num}">
+                                                                            <p class="p-stock-btn">
+                                                                                <a href="javascript:;" class="disabled">-</a>
+                                                                                <a href="javascript:;">+</a>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="p-price-total">￥&nbsp;${((arr[0].num*elm.grid_price).toFixed(2))}</li>
+                                                                <li>
+                                                                    <a href="javascript:;" class="p-del">删除</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="sc-pro-parts"></div>
+                                                    </div>
+                                                </div>
+                                                    `;
+                                                $('.sc-pro').append(template);
+                                            });
+                                        }
+                                    });
+                                }
+                            </script>
+                        </div>
+                    </form>
+                </div>
+                <div>
+                    <div class="sc-total-tool layout clearfix">
+                        <div class="sc-total-control">
+                            <a href="javascript:;">删除</a>
+                        </div>
+                        <div class="sc-total-btn">
+                            <a href="javascript:;">立即结算</a>
+                        </div>
+                        <div class="sc-total-price">
+                            <p>
+                                <label for="">总计:</label>
+                                <span>￥ 0.00</span>
+                                <em><b>不含运费</b></em>
+                            </p>
+                            <div class="total-choose">
+                                已选择
+                                <em>0</em>件商品，优惠：<span>￥ 0.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- footer开始 -->
+            <div class="slogan-container">
+                <div class="slogan">
+                    <ul>
+                        <li class="s1">
+                            <a href=""><i></i>百强企业 品质保证
+                        </a>
+                        </li>
+                        <li class="s2">
+                            <a href="">
+                                <i></i> 7天退货 15天换货
+                            </a>
+                        </li>
+                        <li class="s3">
+                            <a href="">
+                                <i></i> 48元起免运费
+                            </a>
+                        </li>
+                        <li class="s4">
+                            <a href="">
+                                <i></i> 1000家维修网点 全国联保
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="service-container">
+                <div class="service">
+                    <div class="service-l fl">
+                        <dl class="s1">
+                            <dt>
+                            <p class="title">购物相关</p>
+                        </dt>
+                            <dd>
+                                <ol>
+                                    <li><a href="">购物指南</a></li>
+                                    <li><a href="">配送方式</a></li>
+                                    <li><a href="">支付方式</a></li>
+                                    <li><a href="">常见问题</a></li>
+                                </ol>
+                            </dd>
+                        </dl>
+                        <dl class="s1">
+                            <dt>
+                                <p class="title">保修与退换货</p>
+                            </dt>
+                            <dd>
+                                <ol>
+                                    <li><a href="">保修政策</a></li>
+                                    <li><a href="">退换货政策</a></li>
+                                    <li><a href="">退换货流程</a></li>
+                                    <li><a href="">保修状态查询</a></li>
+                                    <li><a href="">配件防伪查询</a></li>
+                                </ol>
+                            </dd>
+                        </dl>
+                        <dl class="s1">
+                            <dt>
+                                    <p class="title">维修与技术支持</p>
+                                </dt>
+                            <dd>
+                                <ol>
+                                    <li><a href="">售后网点</a></li>
+                                    <li><a href="">预约维修</a></li>
+                                    <li><a href="">手机寄修</a></li>
+                                    <li><a href="">备件价格查询</a></li>
+                                    <li><a href="">上门服务</a></li>
+                                </ol>
+                            </dd>
+                        </dl>
+                        <dl class="s1">
+                            <dt>
+                                        <p class="title">特色服务</p>
+                                    </dt>
+                            <dd>
+                                <ol>
+                                    <li><a href="">防伪查询</a></li>
+                                    <li><a href="">补够保障</a></li>
+                                    <li><a href="">以旧换新</a></li>
+                                    <li><a href="">礼品包装</a></li>
+                                </ol>
+                            </dd>
+                        </dl>
+                        <dl class="s1">
+                            <dt>
+                                            <p class="title">关于我们</p>
+                                        </dt>
+                            <dd>
+                                <ol>
+                                    <li><a href="">公司介绍</a></li>
+                                    <li><a href="">华为商城简介</a></li>
+                                    <li><a href="">华为线下门店</a></li>
+                                    <li><a href="">荣耀线下门店</a></li>
+                                    <li><a href="">诚征英才</a></li>
+                                    <li><a href="">意见反馈</a></li>
+                                </ol>
+                            </dd>
+                        </dl>
+                        <dl class="s1">
+                            <dt class="relative">
+                                                <p class="title">友情链接</p>
+                                                <p class="button">
+                                                    <span class="btn btn-prev disabled"> < </span>
+                                                    <span class="btn btn-next"> > </span>
+                                                </p>
+                                            </dt>
+                            <dd>
+                                <ol>
+                                    <li><a href="">华为集团</a></li>
+                                    <li><a href="">华为CBG官网</a></li>
+                                    <li><a href="">荣耀官网</a></li>
+                                    <li><a href="">花粉俱乐部</a></li>
+                                    <li><a href="">华为云</a></li>
+                                </ol>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="service-r fl">
+                        <dl class="s7">
+                            <dt class="">
+                            <p class="title">400-088-6888</p>
+                        </dt>
+                            <dd>
+                                <ol>
+                                    <li><a href="">7x24小时客服热线（仅收市话费）</a></li>
+                                </ol>
+                            </dd>
+                            <dd><a href="" class="service-btn btn-line-primary"><i class="iconfont">&#xe62b;</i>在线客服</a></dd>
+                        </dl>
+                        <div class="service-code clearfix">
+                            <h2>关注Vmall：</h2>
+                            <ul class="clearfix">
+                                <li><a href="#"><i class="iconfont">&#xe613;</i></a></li>
+                                <li><a href="#"><i class="iconfont">&#xe677;</i></a></li>
+                                <li><a href="#"><i class="iconfont">&#xe643;</i></a></li>
+                                <li><a href="#"><i class="iconfont">&#xe82e;</i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 最下面的vmall -->
+            <div class="footer-container" style="padding-bottom: 0px;">
+                <div class="footer">
+                    <div class="footer-warrant-area clearfix">
+                        <p class="footer-warrant-logo fl">
+                            <a href="">
+                                <img src="https://res.vmallres.com/pimages//sale/2019-01/wLelYbpMVWbj9Xpaa5Fk.png" alt="">
+                            </a>
+                        </p>
+                        <div class="fl">
+                            <ul class="footer-warrant-link">
+                                <li><a href="javascript:;">华为集团</a></li>
+                                <li><a href="javascript:;">华为CBG官网</a></li>
+                                <li><a href="javascript:;">荣耀官网</a></li>
+                                <li><a href="javascript:;">花粉俱乐部</a></li>
+                                <li><a href="javascript:;">华为应用市场</a></li>
+                                <li><a href="javascript:;">EMUI</a></li>
+                                <li><a href="javascript:;">华为终端云空间</a></li>
+                                <li><a href="javascript:;">开发者联盟</a></li>
+                                <li><a href="javascript:;">华为商城手机版</a></li>
+                                <li><a href="javascript:;">网站地图</a></li>
+                            </ul><a href="javascript:;" title="隐私声明">隐私声明</a> <a href="javascript:;" title="服务协议">服务协议</a> <a href="javascript:;" title="COOKIES">COOKIES</a> Copyright © 2012-2019 华为终端有限公司 版权所有 <a href="javascript:;">粤公网安备 44190002003939号</a><br>增值电信业务经营许可证：粤B2-20190762
+                            <em>|</em>备案主体编号：44201919072182</div>
+                        <p class="fr footer-warrant-img">
+                            <a href="javascript:;" class="fl"><img src="https://res.vmallres.com/pimages//sale/2018-05/20180522101715775.jpg" alt="TRUSTe隐私认证" title="TRUSTe隐私认证"> </a>
+                            <a href="javascript:;" class="fl"><img src="https://res.vmallres.com/pimages//template/content/2016/20160226162415360.png" alt="电子营业执照" title="电子营业执照"></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- footer结束 -->
+        </div>
+    </div>
+</body>
+
+</html>

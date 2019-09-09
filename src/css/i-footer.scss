@@ -1,0 +1,316 @@
+.service-container,
+.slogan-container {
+    background: #f9f9f9;
+    width: 100%;
+    min-width: 1200px;
+}
+
+.slogan {
+    padding: 22px 0 20px;
+    width: 1200px;
+    margin: 0 auto;
+    .s1 i {
+        background-position: -74px 0;
+    }
+    .s2 i {
+        background-position: -154px 0;
+    }
+    .s3 i {
+        background-position: -194px 0;
+    }
+    .s4 i {
+        background-position: -114px 0;
+    }
+}
+
+.slogan li:first-child {
+    padding-right: 120px;
+}
+
+.slogan li:first-child+li {
+    padding-right: 120px;
+}
+
+.slogan li:first-child+li+li {
+    padding-right: 110px;
+}
+
+.slogan li {
+    display: table-cell;
+    font-size: 18px;
+    color: #333;
+    height: 40px;
+    text-align: center;
+    vertical-align: middle;
+    i {
+        display: inline-block;
+        vertical-align: middle;
+        width: 40px;
+        height: 40px;
+        margin-right: 15px;
+        background: url(https://res8.vmallres.com/20190630/images/echannel/icon/icon01.svg?20170620) no-repeat;
+    }
+}
+
+.service-container,
+.slogan-container {
+    background: #f9f9f9;
+    width: 100%;
+    min-width: 1200px;
+}
+
+.service {
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 23px 0 24px;
+    width: 1200px;
+    margin: 0 auto;
+    *zoom: 1;
+    .service-l {
+        width: 920px;
+        height: 155px;
+        padding-top: 5px;
+        border-right: 1px solid #e5e5e5;
+        dl {
+            width: 16.66667%;
+            float: left;
+        }
+    }
+    dt {
+        font-size: 14px;
+        color: #3a3a3a;
+        .title {
+            font-size: 14px!important;
+            padding-bottom: 7px;
+            color: #333;
+            display: block;
+            border-left: none;
+            padding-left: 0;
+            line-height: 1.5!important;
+            margin-bottom: 0!important;
+        }
+        .button {
+            position: absolute;
+            left: 62px;
+            bottom: 5px;
+        }
+        .btn {
+            display: inline-block;
+            width: 10px;
+            height: 14px;
+            margin-right: 4px;
+            cursor: pointer;
+            overflow: hidden;
+            &:before {
+                color: #969696;
+                font-family: "iconfont"!important;
+                font-style: normal;
+                -webkit-font-smoothing: antialiased;
+                -webkit-text-stroke-width: .2px;
+                -moz-osx-font-smoothing: grayscale;
+                color: #343434;
+                font-size: 15px;
+                position: relative;
+                top: 1px;
+                left: -1px;
+                display: block;
+                text-indent: 0;
+                line-height: 14px;
+            }
+        }
+        .btn.disabled {
+            cursor: not-allowed;
+        }
+    }
+    dd {
+        li {
+            line-height: 22px;
+            color: #777;
+            a {
+                color: #777;
+            }
+        }
+    }
+}
+
+.service .service-r {
+    width: 279px;
+    min-height: 160px;
+    margin-top: 2px;
+    text-align: center;
+    .s7 {
+        width: 279px;
+        .title {
+            font-size: 24px!important;
+            padding: 0;
+            line-height: 24px;
+            font-weight: bold;
+        }
+        dd {
+            font-size: 14px;
+            color: #333;
+            li {
+                line-height: 22px;
+                color: #777;
+                a {
+                    color: #575757;
+                }
+            }
+        }
+    }
+}
+
+.service dt {
+    font-size: 14px;
+    color: #3a3a3a;
+}
+
+.service-btn {
+    display: block;
+    width: 170px;
+    height: 34px;
+    padding: 0;
+    margin: 0 auto;
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 34px;
+    background: #333;
+    cursor: pointer;
+    border-radius: 17px;
+    i {
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+        margin-right: 6px;
+    }
+}
+
+.service dd a.service-btn {
+    color: #fff;
+}
+
+.service-code {
+    float: left;
+    width: 250px;
+    margin-top: 26px;
+    margin-left: 40px;
+    h2 {
+        font-size: 14px;
+        color: #333;
+        float: left;
+        font-weight: 400;
+    }
+    ul {
+        float: left;
+        margin-left: 3px;
+    }
+    li {
+        width: 24px;
+        height: 24px;
+        margin-right: 11px;
+        position: relative;
+        float: left;
+        a {
+            display: block;
+            width: 24px;
+            height: 24px;
+            font-size: 24px;
+            line-height: 24px;
+            color: #303030;
+            i {
+                font-size: 24px
+            }
+        }
+    }
+}
+
+// 最下面的vmall
+.footer-container {
+    background: #f9f9f9;
+    width: 100%;
+    min-width: 1200px;
+}
+
+.footer {
+    padding: 25px 0 28px;
+    width: 1200px;
+    margin: 0 auto;
+    color: #666;
+    line-height: 1.5;
+}
+
+.footer-warrant-area {
+    text-align: left;
+    color: #a4a4a4;
+    line-height: 20px;
+    a {
+        color: #a4a4a4;
+    }
+    em {
+        padding-right: 3px;
+        margin-left: 3px;
+    }
+    .footer-warrant-img {
+        margin-top: 2px;
+        a {
+            display: block;
+            width: 70px;
+            margin-left: 17px;
+            height: 24px;
+        }
+        img {
+            vertical-align: top;
+            width: 70px;
+            height: 24px;
+        }
+    }
+    .footer-warrant-logo {
+        width: 82px;
+        height: 20px;
+        padding: 3px 20px 0 0;
+        a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        img {
+            vertical-align: top;
+            width: 82px;
+            height: 20px;
+        }
+    }
+}
+
+.footer-warrant-link {
+    *zoom: 1;
+    margin-top: 3px;
+    margin-bottom: 6px;
+    &:before {
+        content: "";
+        display: table;
+    }
+    &:after {
+        content: "";
+        display: table;
+    }
+    li {
+        float: left;
+        line-height: 1;
+        padding-right: 6px;
+        border-right: 1px solid #d3d3d3;
+        margin-right: 6px;
+        a {
+            color: #777;
+        }
+    }
+}
+
+.service:before,
+.service:after {
+    content: "";
+    display: table;
+}
+
+.service:after {
+    clear: both;
+}

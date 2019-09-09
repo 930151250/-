@@ -1,0 +1,609 @@
+html,
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font: 12px/1.5 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #ca151d;
+}
+
+.relative {
+  position: relative;
+}
+
+.left,
+.fl {
+  float: left;
+}
+
+.right,
+.fr {
+  float: right;
+}
+
+ins,
+a {
+  text-decoration: none;
+  color: #3a3a3a;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+  font-style: normal;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: 400;
+}
+
+.span-232 {
+  width: 232px;
+}
+
+.span-968 {
+  width: 968px;
+}
+
+.hr-27 {
+  height: 27px;
+}
+
+.hr-13 {
+  height: 13px;
+}
+
+.hide,
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.hr-1,
+.hr-2,
+.hr-3,
+.hr-4,
+.hr-5,
+.hr-7,
+.hr-9,
+.hr-10,
+.hr-15,
+.hr-18,
+.hr-20,
+.hr-22,
+.hr-25,
+.hr-30,
+.hr-32.hr-35,
+.hr-40,
+.hr-45,
+.hr-50,
+.hr-55,
+.hr-60,
+.hr-65,
+.hr-70,
+.hr-75,
+.hr-80,
+.hr-85,
+.hr-90 {
+  clear: both;
+  font-size: 1px;
+  line-height: 1px;
+}
+
+.head_center {
+  width: auto;
+  max-width: 998px;
+  height: 67px;
+  margin: 0 auto;
+  border: 0;
+  position: relative;
+}
+
+.head_center .main-logo {
+  position: static;
+  left: 2px;
+  float: left;
+}
+
+.head_center .main-logo img {
+  margin-left: 4px;
+  margin-top: 17px;
+}
+
+.adHeadPicContainer {
+  margin-right: 20px;
+}
+
+.website-name {
+  color: white;
+  font-size: 20px;
+  line-height: 50px;
+  font-family: "arial";
+  padding-top: 14px;
+}
+
+.adHeadTitle {
+  color: #333;
+  font-size: 18px;
+  margin-top: -3px;
+  float: left;
+  margin-left: 20px;
+  font-weight: normal;
+}
+
+.prompt_icon {
+  background-image: url(../img/prompt.png);
+  background-repeat: no-repeat;
+  background-size: 13px 13px;
+  padding: 0 20px;
+}
+
+.login_bg {
+  background-color: #081638;
+}
+
+.g {
+  background-image: url(../img/login_default_bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 1130px;
+  height: 590px;
+  margin: 0 auto;
+  zoom: 1;
+  position: relative;
+}
+
+.login-area-box {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  height: 530px;
+  position: relative;
+}
+
+.login-right {
+  width: 380px;
+  float: right;
+  background-color: #fff;
+}
+
+.login-area .h {
+  width: 100%;
+  margin: 24px auto;
+  text-align: center;
+}
+
+.themeName-red .login-area .h span:hover,
+.themeName-red .login-area .h .actived,
+.themeName-red .login-div .h span:hover,
+.themeName-red .login-div .h .actived {
+  color: #b40707;
+}
+
+.login-area .h span,
+.login-div .h span {
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  width: 169px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0 10px;
+}
+
+.login-area .h .splitLine,
+.login-div .h .splitLine {
+  border-left: 1px solid #ccc;
+}
+
+.login-area .h span,
+.login-div .h span {
+  font-size: 20px;
+  color: #333;
+  font-weight: 500;
+  cursor: pointer;
+  width: 140px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0 10px;
+}
+
+.b-account {
+  width: 328px;
+  margin: 0 auto;
+}
+
+.userAccountLogin-errorTipsDiv,
+.twice-userAccountLogin-errorTipsDiv,
+.smsValidateLogin-errorTipsDiv {
+  font-size: 12px;
+  color: #ff3320;
+  line-height: 1.3;
+  min-height: 15px;
+}
+
+.login-div .form-edit-area table,
+.login-area .form-edit-area table {
+  width: 328px;
+}
+
+.user-input-tr {
+  border-bottom: 1px solid #ccc;
+  height: 46px;
+}
+
+td {
+  word-wrap: break-word;
+  word-break: normal;
+}
+
+.form-edit-area .lb_opacity_Class div {
+  padding: 0;
+  margin: 0 !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 328px;
+}
+
+.form-edit-area .text,
+.form-edit-area .verify {
+  border: 0;
+  *border: 0;
+  color: #333;
+  font-size: 14px;
+  height: 46px;
+  line-height: 46px;
+  border-radius: 0;
+}
+
+.form-edit-area .text,
+.form-edit-area .verify {
+  border: 0;
+  *border: 0;
+  color: #333;
+  font-size: 14px;
+  height: 46px;
+  line-height: 46px;
+  border-radius: 0;
+}
+
+.vam {
+  vertical-align: middle;
+}
+
+.user-input-tr {
+  border-bottom: 1px solid #ccc;
+  height: 46px;
+}
+
+.form-edit-area .lb_opacity_Class div {
+  padding: 0;
+  margin: 0 !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 328px;
+}
+
+.form-edit-area .text,
+.form-edit-area .verify {
+  border: 0;
+  *border: 0;
+  color: #333;
+  font-size: 14px;
+  height: 46px;
+  line-height: 46px;
+  border-radius: 0;
+}
+
+.form-edit-area td.mt-links {
+  padding: 16px 0;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.referenceTarget {
+  position: relative;
+}
+
+.lineHeightFix {
+  line-height: 1 !important;
+}
+
+.changeLoginType {
+  color: #007dff;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.phoneIcon {
+  width: 11px;
+  height: 15px;
+  background-image: url(../img/ic_smsLogin.png);
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-position: -2px 0;
+  margin-bottom: -3px;
+}
+
+.marginR6 {
+  margin-right: 6px;
+}
+
+.button-login {
+  width: 326px;
+  border-radius: 0;
+  line-height: 44px;
+  height: 44px;
+  font-weight: bold;
+  font-size: 14px;
+  background-image: none;
+  cursor: pointer;
+  border-radius: 26px;
+  text-align: center;
+  margin-top: 0;
+}
+
+.button-login {
+  background-color: #b40707;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #b40707;
+  color: #fff;
+}
+
+.themeName-red td.mt-checkbox {
+  padding: 16px 0;
+  position: relative;
+}
+
+.button-login {
+  font-family: "Microsoft YaHei" !important;
+}
+
+.tick-off-icon {
+  width: 18px;
+  height: 18px;
+  background-image: url(../img/tick-off-18.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  margin-bottom: -4px;
+}
+
+.tick-off-icon {
+  left: 0;
+}
+
+.marginR6 {
+  margin-right: 6px;
+}
+
+#remember_name {
+  left: -10000px;
+  position: absolute;
+  top: -100000px;
+}
+
+.checkbox {
+  margin-right: 5px;
+  margin-top: 3px;
+}
+
+.referenceTarget_login_more {
+  position: absolute;
+  right: 0;
+  z-index: 1000;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.thirdLoginBlock {
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  color: #999;
+  line-height: 16px;
+}
+
+.thirdLintTitle {
+  position: relative;
+  width: 328px;
+  margin-bottom: 10px;
+}
+
+.thirdLintTitle .line-left {
+  left: 0;
+  top: 50%;
+  background-image: url(../img/third_login.png);
+  background-repeat: no-repeat;
+  height: 1px;
+  position: absolute;
+  width: 94px;
+  background-size: cover;
+}
+
+.thirdLintTitle .third-tips {
+  color: #ccc;
+  vertical-align: middle;
+  text-align: center;
+  max-width: 190px;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  background: #fff;
+  padding: 0 10px;
+  line-height: 1.5;
+}
+
+.thirdLintTitle .line-right {
+  right: 0;
+  bottom: 50%;
+  background-image: url(../img/third_login.png);
+  background-repeat: no-repeat;
+  height: 1px;
+  position: absolute;
+  width: 94px;
+  background-size: cover;
+}
+
+.thirdLoginDiv {
+  width: 328px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.thirdLoginDiv span {
+  padding: 0 10px;
+  text-align: center;
+  display: inline-block;
+}
+
+.qqLogin_bigIco a {
+  background-image: url(../img/third_login.png);
+  background-repeat: no-repeat;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  display: inline-block;
+  margin: 0;
+  float: none;
+  background-position: -72px -9px;
+}
+
+.alipayLogin_bigIco a {
+  background-image: url(../img/third_login.png);
+  background-repeat: no-repeat;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  display: inline-block;
+  margin: 0;
+  float: none;
+  background-position: -132px -9px;
+}
+
+.weixinLogin_bigIco a {
+  background-image: url(../img/third_login.png);
+  background-repeat: no-repeat;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  display: inline-block;
+  margin: 0;
+  float: none;
+  background-position: -12px -9px;
+}
+
+.ft {
+  margin: 20px auto;
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+}
+
+.ft p {
+  display: inline-block;
+}
+
+.ft p a {
+  font-size: 12px;
+  color: #999;
+}
+
+.ft p:first-child {
+  display: block;
+}
+
+.rule {
+  padding: 0 10px;
+}
+
+.foot_em {
+  font-size: 16px;
+}

@@ -1,0 +1,183 @@
+// 轮播图上的导航栏
+.naver-main {
+    min-width: 1200px;
+    background-color: #FFF;
+    .layout {
+        position: relative;
+        z-index: 410;
+        .category {
+            position: absolute;
+            left: 0;
+            top: 18px;
+            width: 200px;
+            .category-info {
+                padding: 12px 0 13px 0;
+                margin: 0;
+                margin-left: 25px;
+                width: 150px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+                height: 47px;
+                position: relative;
+                a {
+                    color: #a6a6a6;
+                    margin-right: 10px;
+                    font-size: 14px;
+                    display: inline-block;
+                }
+                .category-title {
+                    margin-bottom: 2px;
+                    a {
+                        font-size: 16px;
+                        color: #848484;
+                    }
+                }
+                .category-info-detail {
+                    width: 175px;
+                    height: 47px;
+                    overflow: hidden;
+                }
+            }
+            .category-list {
+                position: relative;
+                height: 440px;
+                box-shadow: 0 0 46px rgba(0, 0, 0, 0.03);
+                background: rgba(255, 255, 255, 0.95);
+                border-radius: 10px;
+            }
+            .category-item:first-child .category-info {
+                height: 48px;
+            }
+        }
+    }
+}
+
+// 二级导航开始
+.category .category-panels.category-panels-3 {
+    width: 612px;
+}
+
+.category .category-panels {
+    position: absolute;
+    left: 198px;
+    height: 416px;
+    max-width: 1020px;
+    background: #FFF;
+    padding: 24px 22px 0 28px;
+    border-radius: 0 10px 10px 0;
+    box-shadow: 0 0 46px rgba(0, 0, 0, 0.1);
+    top: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.category .subcate-list {
+    width: 204px;
+    margin: 0;
+    float: left;
+    .subcate-item {
+        float: left;
+        margin-bottom: 24px;
+        a {
+            display: block;
+            width: 204px;
+            height: 80px;
+            font-size: 14px;
+            border-radius: 10px;
+            margin-right: 0;
+            img {
+                width: 56px;
+                height: 56px;
+                float: left;
+                margin: 12px 8px 0 6px;
+            }
+            span {
+                float: left;
+                color: #777;
+                font-size: 13px;
+                margin-top: 30px;
+                width: 120px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+    }
+}
+
+.category .subcate-list .subcate-btn {
+    float: left;
+    a {
+        width: 112px;
+        height: 42px;
+        line-height: 42px;
+        margin-top: 18px;
+        margin-left: 36px;
+        border: 1px solid #f2f2f2;
+        border-radius: 0 22px 22px 0;
+        font-size: 13px;
+        color: #a7a7a7;
+        display: block;
+        position: relative;
+        text-indent: 34px;
+        &:before {
+            content: "";
+            width: 42px;
+            height: 42px;
+            background: #fff;
+            border: 1px solid #f2f2f2;
+            display: block;
+            border-radius: 22px;
+            position: absolute;
+            top: -1px;
+            left: -22px;
+        }
+        &:after {
+            content: "";
+            width: 0;
+            height: 0;
+            display: block;
+            border-bottom: 5px solid transparent;
+            border-top: 5px solid transparent;
+            border-left: 5px solid #c0c0c0;
+            position: absolute;
+            top: 16px;
+            left: -1px;
+        }
+    }
+}
+
+.category .category-panels.category-panels-1 {
+    width: 204px;
+}
+
+.category .category-panels.category-panels-5 {
+    width: 1020px;
+}
+
+.category .category-panels.category-panels-2 {
+    width: 408px;
+}
+
+.category .category-panels.none {
+    display: none;
+}
+
+.category-item:hover .none {
+    display: block;
+}
+
+// 轮播图上的导航栏结束
+// 轮播图上面的登陆注册开始
+.home-channel-list {
+    background: #FFF;
+    text-align: center;
+    border-top: 0 none;
+    width: 1200px;
+    height: 88px;
+    border-radius: 10px;
+    box-shadow: 0 2px 26px rgba(0, 0, 0, 0.07);
+    position: absolute;
+    z-index: 2;
+}
+
+// 轮播图上的登陆注册结束

@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册页面</title>
+    <link rel="stylesheet" href="./css/register.css">
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/reg.js"></script>
+</head>
+
+<body class="reg themeName-red" id="loginform">
+    <div class="head-background">
+        <div class="head_center">
+            <div class="main-logo adHeadPicContainer" style="width:143px">
+                <img src="https://id1.cloud.huawei.com/CAS/up/idmw_rss_41/logos/head-top.png" class="wihteBgPic">
+            </div>
+            <div class="website-name">
+                <b style="font-size: 18px;margin-top: -5px;float: left;color:#cccccc;">|</b>
+                <b style="font-size: 18px;margin-top: -3px;float: left; margin-left:18px;">华为商城</b>
+            </div>
+        </div>
+    </div>
+    <div class="wp1 relative">
+        <div class="register-content" id="registerForm">
+            <div class="reg-tab clearFix" style="visibility: visible;">
+                <a href="javascript" class="phone-wrap l sel">
+                    <i class="phone-icon"></i>
+                    <span id="tabPhone" class="tab-phone" style="width: 66px;">手机号</span>
+                </a>
+                <a href="javscript" class="mail-wrap l">
+                    <i class="mail-icon"></i>
+                    <span id="tabMail" class="tab-email" style="width: 66px;">电子邮箱</span>
+                </a>
+            </div>
+            <div class="login r">
+                已有华为帐号
+                <a href="javascript" class="login-a">登录</a>
+                <span class="ar-eg-opposite">></span>
+            </div>
+
+            <!-- 注册华为账号开始 -->
+            <div class="reg-detail">
+                <div class="registerTitle">
+                    <div class="mianTitle">注册华为帐号</div>
+                    <div class="subTitle">用于访问所有华为终端云服务</div>
+                </div>
+                <!-- 选择国家开始 -->
+                <form action="http://localhost/js1907/huawei/src/lib/register.php" method="POST">
+                    <div class="input-container" id="chooseCountry">
+                        <div class="l input-left">
+                            国家/地区
+                        </div>
+                        <div class="input-content" style="margin-left: 123px;">
+                            <div class="node-input ddrop-EMU5" id="selectCountryImg">
+                                <div class="dropMenu" id="dropMenu">
+                                    <input type="hidden" class="selectVal" value="1-cn">
+                                    <span class="select-text ">中国</span>
+                                    <div class="select-ico"></div>
+                                </div>
+                                <script>
+                                    $(function() {
+                                        $('#dropMenu').on('click', function() {
+                                            $('#droplist').toggle()
+                                        })
+                                    })
+                                </script>
+                                <!-- 点击中国弹出的选择框开始 -->
+                                <div class="droplist" id="droplist" style="display: none;">
+                                    <div class="orderContainer">
+                                        <div class="input-div">
+                                            <input type="text" class="searchValue" placeholder="搜索">
+                                        </div>
+                                        <div class="margin16 flow-label">
+                                            <span>常用国家/地区</span>
+                                            <span class="orderItem" data-order="A">A</span>
+                                            <span class="orderItem" data-order="B">B</span>
+                                            <span class="orderItem" data-order="C">A</span>
+                                            <span class="orderItem" data-order="A">A</span>
+                                            <span class="orderItem" data-order="A">A</span>
+                                            <span class="orderItem" data-order="A">A</span>
+                                            <span class="orderItem" data-order="A">A</span>
+                                            <span class="orderItem" data-order="A">A</span>
+                                            <span class="orderItem" data-order="A">A</span>
+                                            <span class="orderItem" data-order="A">A</span>
+                                            <span class="orderItem" data-order="A">A</span>
+                                            <span class="orderItem" data-order="A">A</span>
+                                            <span class="orderItem" data-order="A">A</span>
+                                            <span class="orderItem" data-order="A">A</span>
+                                            <span class="orderItem" data-order="A">A</span>
+                                            <span class="orderItem" data-order="A">A</span>
+                                            <span class="orderItem" data-order="A">A</span>
+                                            <span class="orderItem" data-order="A">A</span>
+                                            <span class="orderItem" data-order="A">A</span>
+                                            <span class="orderItem" data-order="A">A</span>
+
+                                        </div>
+                                    </div>
+                                    <ul class="list-container">
+                                        <div class="line-container-nav">A</div>
+                                        <li class="dropListEMUI5_li" style="display: list-item">阿尔巴尼亚</li>
+                                        <div class="line-container" style="display: block">
+                                            <div class="line"></div>
+                                        </div>
+                                        <div class="line-container-nav">A</div>
+                                        <li class="dropListEMUI5_li" style="display: list-item">阿尔巴尼亚</li>
+                                        <div class="line-container" style="display: block">
+                                            <div class="line"></div>
+                                        </div>
+                                        <div class="line-container-nav">A</div>
+                                        <li class="dropListEMUI5_li" style="display: list-item">阿尔巴尼亚</li>
+                                        <div class="line-container" style="display: block">
+                                            <div class="line"></div>
+                                        </div>
+                                        <div class="line-container-nav">A</div>
+                                        <li class="dropListEMUI5_li" style="display: list-item">阿尔巴尼亚</li>
+                                        <div class="line-container" style="display: block">
+                                            <div class="line"></div>
+                                        </div>
+                                        <div class="line-container-nav">A</div>
+                                        <li class="dropListEMUI5_li" style="display: list-item">阿尔巴尼亚</li>
+                                        <div class="line-container" style="display: block">
+                                            <div class="line"></div>
+                                        </div>
+                                    </ul>
+
+                                </div>
+                                <!-- 点击中国弹出的选择框结束-->
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- 选择国家结束 -->
+                    <!-- 手机号码开始 -->
+                    <div class="input-container" id="phoneInputDiv-box">
+                        <div class="l input-left">
+                            <!-- <input type="text" id="countryCode" value="0086"> -->
+                            <div id="input_languageCode" class="ddrop-EMU5">
+                                <div class="dropMenu" id="dropMenu1">
+                                    <!-- <input type="hidden" class="selectVal" value="0086"> -->
+                                    <span class="select-text">+86(中国)</span>
+                                    <div class="select-ico"></div>
+                                </div>
+                                <script>
+                                    $(function() {
+                                        $('#dropMenu1').on('click', function() {
+                                            $('#droplist1').toggle()
+                                        })
+                                    })
+                                </script>
+                                <div class="droplist" id="droplist1" style="display: none;">
+                                    <div class="orderContainer">
+                                        <div class="input-div">
+                                            <input type="text" class="searchValue" placeholder="搜索">
+                                        </div>
+
+                                    </div>
+                                    <ul class="list-container">
+                                        <div class="line-container-nav">A</div>
+                                        <li class="dropListEMUI5_li" style="display: list-item">阿尔巴尼亚</li>
+                                        <div class="line-container" style="display: block">
+                                            <div class="line"></div>
+                                        </div>
+                                        <div class="line-container-nav">A</div>
+                                        <li class="dropListEMUI5_li" style="display: list-item">阿尔巴尼亚</li>
+                                        <div class="line-container" style="display: block">
+                                            <div class="line"></div>
+                                        </div>
+                                        <div class="line-container-nav">A</div>
+                                        <li class="dropListEMUI5_li" style="display: list-item">阿尔巴尼亚</li>
+                                        <div class="line-container" style="display: block">
+                                            <div class="line"></div>
+                                        </div>
+                                        <div class="line-container-nav">A</div>
+                                        <li class="dropListEMUI5_li" style="display: list-item">阿尔巴尼亚</li>
+                                        <div class="line-container" style="display: block">
+                                            <div class="line"></div>
+                                        </div>
+                                        <div class="line-container-nav">A</div>
+                                        <li class="dropListEMUI5_li" style="display: list-item">阿尔巴尼亚</li>
+                                        <div class="line-container" style="display: block">
+                                            <div class="line"></div>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="r input-right"></div>
+                        <div class="input-content">
+                            <label for="" class="lb_opacity_Class" style="display: block; position: absolute; cursor: text; float: left; z-index: 2; padding-left: 0px; padding-top: 10px;">
+                                <div class="text input-number" style="border: none; background: transparent; cursor: text; margin: 2px; color: rgb(204, 204, 204);"></div>
+                            </label>
+                            <input type="text" class="text input-number" id="phone" placeholder="请输入手机号码" name="phone">
+                        </div>
+                    </div>
+                    <!-- 手机号码结束 -->
+                    <!-- 验证码开始 -->
+                    <div class="input-container" id="randomCodeDiv">
+                        <div class="geetest_radar_tip">
+                            <span class="geetest_radar_tip_content">点击按钮进行验证</span>
+                        </div>
+                    </div>
+                    <!-- 验证码结束 -->
+                    <!-- 短信验证开始 -->
+                    <div class="input-container" id="errRandomCode-box">
+                        <div class="l input-left">
+                            短信验证码
+                        </div>
+                        <div class="r input-right">
+                            <input type="button" class="get-code dbtn2" id="getValiCode" value="获取验证啊">
+                        </div>
+                        <div class="input-content">
+                            <label for="" class="lb_opacity_Class" style="display: block; position: absolute; cursor: text; float: left; z-index: 2; padding-left: 0px; padding-top: 10px;">
+                            <div class="text input-number" style="border: none; background: transparent; cursor: text; margin: 2px; color: rgb(204, 204, 204);"></div>
+                            </label>
+                            <input type="text" class="text input-number" placeholder="请输入短信验证码">
+                        </div>
+                    </div>
+                    <!-- 短信验证结束 -->
+                    <!-- 密码开始 -->
+                    <div class="set-password">
+                        <div class="input-container" id="pwdDiv">
+                            <div class="l input-left">密码</div>
+                            <div class="input-content">
+                                <label for="" class="lb_opacity_Class" style="display: block; position: absolute; cursor: text; float: left; z-index: 2; padding-left: 0px; padding-top: 10px;">
+                                <div class="text input-number" style="border: none; background: transparent; cursor: text; margin: 2px; color: rgb(204, 204, 204);"></div>
+                                </label>
+                                <input type="text" class="text input-number" placeholder="请输入密码" name="password">
+                            </div>
+                        </div>
+                        <!-- <div class="input-container" id="pwdDiv">
+                            <div class="l input-left">确认密码</div>
+                            <div class="input-content">
+                                <label for="" class="lb_opacity_Class" style="display: block; position: absolute; cursor: text; float: left; z-index: 2; padding-left: 0px; padding-top: 10px;">
+                                <div class="text input-number" style="border: none; background: transparent; cursor: text; margin: 2px; color: rgb(204, 204, 204);"></div>
+                                </label>
+                                <input type="text" class="text input-number" placeholder="请再次输入密码" name="password">
+                            </div>
+                        </div> -->
+                        <!-- 出生日期开始 -->
+                        <div id="birthDateBox" class="relative">
+                            <div class="input-container input-birthday" id="birthDateWrap">
+                                <div class="l input-left">出生日期</div>
+                                <div class="input-content birthDateContent" style="margin-left: 123px;">
+                                    <div class="birthday-choose l" id="birthDate">
+                                        <div>
+                                            <input type="hidden" class="year" value="N">
+                                            <input type="hidden" class="month" value="N">
+                                            <input type="hidden" class="day" value="N">
+                                            <div class="yearDiv dateItems ddrop-EMU5" style="overflow: visible;">
+                                                <input type="hidden" value="1999">
+                                                <span class="select-text ">1999</span>
+                                                <span class="suffix" style="color: rgb(51, 51, 51);">年</span>
+                                                <div class="select-ico"></div>
+                                                <ul class="dpmenu-EMU5 dpmenu-EMUI5-down" style="overflow-y: scroll; min-width: 156px; max-width: 310px; width: 136px; display: none;">
+                                                    <div class="flow-top"></div>
+                                                    <li class="dropListEMUI5_li   isLineUnable-false">2019</li>
+                                                    <div class="uc-line">
+                                                        <div></div>
+                                                    </div>
+                                                    <li class="dropListEMUI5_li   isLineUnable-false">2018</li>
+                                                    <div class="uc-line">
+                                                        <div></div>
+                                                    </div>
+                                                    <li class="dropListEMUI5_li   isLineUnable-false">2017</li>
+                                                    <div class="uc-line">
+                                                        <div></div>
+                                                    </div>
+                                                    <li class="dropListEMUI5_li   isLineUnable-false">2016</li>
+                                                    <div class="uc-line">
+                                                        <div></div>
+                                                    </div>
+                                                    <li class="dropListEMUI5_li   isLineUnable-false">2015</li>
+                                                    <div class="uc-line">
+                                                        <div></div>
+                                                    </div>
+                                                    <li class="dropListEMUI5_li   isLineUnable-false">2014</li>
+                                                    <div class="uc-line">
+                                                        <div></div>
+                                                    </div>
+                                                    <li class="dropListEMUI5_li   isLineUnable-false">2013</li>
+                                                    <div class="uc-line">
+                                                        <div></div>
+                                                    </div>
+                                                    <li class="dropListEMUI5_li   isLineUnable-false">2012</li>
+                                                    <div class="uc-line">
+                                                        <div></div>
+                                                    </div>
+                                                    <li class="dropListEMUI5_li   isLineUnable-false">2011</li>
+                                                    <div class="uc-line">
+                                                        <div></div>
+                                                    </div>
+                                                    <li class="dropListEMUI5_li   isLineUnable-false">2010</li>
+                                                    <div class="uc-line">
+                                                        <div></div>
+                                                    </div>
+                                                    <li class="dropListEMUI5_li   isLineUnable-false">2009</li>
+                                                    <div class="uc-line">
+                                                        <div></div>
+                                                    </div>
+                                                    <li class="dropListEMUI5_li   isLineUnable-false">2008</li>
+                                                    <div class="uc-line">
+                                                        <div></div>
+                                                    </div>
+                                                </ul>
+                                            </div>
+                                            <div class="monthDiv dateItems ddrop-EMU5" style="overflow: visible;">
+                                                <input type="hidden" value="1">
+                                                <span class="select-text " style="visibility: hidden;">1</span>
+                                                <span class="suffix" style="color:#999">月</span>
+                                                <div class="select-ico">
+                                                    <ul class="dpmenu-EMU5 dpmenu-EMUI5-down" style="overflow-y: scroll; min-width: 156px; max-width: 310px; width: 136px; display: none;">
+                                                        <div class="flow-top"></div>
+                                                        <li class="dropListEMUI5_li   isLineUnable-false">1</li>
+                                                        <div class="uc-line">
+                                                            <div></div>
+                                                        </div>
+                                                        <li class="dropListEMUI5_li   isLineUnable-false">2</li>
+                                                        <div class="uc-line">
+                                                            <div></div>
+                                                        </div>
+                                                        <li class="dropListEMUI5_li   isLineUnable-false">3</li>
+                                                        <div class="uc-line">
+                                                            <div></div>
+                                                        </div>
+                                                        <li class="dropListEMUI5_li   isLineUnable-false">4</li>
+                                                        <div class="uc-line">
+                                                            <div></div>
+                                                        </div>
+                                                        <li class="dropListEMUI5_li   isLineUnable-false">5</li>
+                                                        <div class="uc-line">
+                                                            <div></div>
+                                                        </div>
+                                                        <li class="dropListEMUI5_li   isLineUnable-false">6</li>
+                                                        <div class="uc-line">
+                                                            <div></div>
+                                                        </div>
+                                                        <li class="dropListEMUI5_li   isLineUnable-false">7</li>
+                                                        <div class="uc-line">
+                                                            <div></div>
+                                                        </div>
+                                                        <li class="dropListEMUI5_li   isLineUnable-false">8</li>
+                                                        <div class="uc-line">
+                                                            <div></div>
+                                                        </div>
+                                                        <li class="dropListEMUI5_li   isLineUnable-false">9</li>
+                                                        <div class="uc-line">
+                                                            <div></div>
+                                                        </div>
+                                                        <li class="dropListEMUI5_li   isLineUnable-false">10</li>
+                                                        <div class="uc-line">
+                                                            <div></div>
+                                                        </div>
+                                                        <li class="dropListEMUI5_li   isLineUnable-false">11</li>
+                                                        <div class="uc-line">
+                                                            <div></div>
+                                                        </div>
+                                                        <li class="dropListEMUI5_li   isLineUnable-false">12</li>
+                                                        <div class="uc-line">
+                                                            <div></div>
+                                                        </div>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="dayDiv dateItems ddrop-EMU5" style="overflow: visible;">
+                                                <input type="hidden" value="1">
+                                                <span class="select-text " style="visibility: hidden;">1</span>
+                                                <span class="suffix" style="color:#999">日</span>
+                                                <div class="select-ico">
+                                                    <ul class="dpmenu-EMU5 dpmenu-EMUI5-down" style="overflow-y: scroll; min-width: 156px; max-width: 310px; width: 136px; display: none;">
+                                                        <div class="flow-top"></div>
+                                                        <li class="dropListEMUI5_li   isLineUnable-false">1</li>
+                                                        <div class="uc-line">
+                                                            <div></div>
+                                                        </div>
+                                                        <li class="dropListEMUI5_li   isLineUnable-false">2</li>
+                                                        <div class="uc-line">
+                                                            <div></div>
+                                                        </div>
+                                                        <li class="dropListEMUI5_li   isLineUnable-false">3</li>
+                                                        <div class="uc-line">
+                                                            <div></div>
+                                                        </div>
+                                                        <li class="dropListEMUI5_li   isLineUnable-false">4</li>
+                                                        <div class="uc-line">
+                                                            <div></div>
+                                                        </div>
+                                                        <li class="dropListEMUI5_li   isLineUnable-false">5</li>
+                                                        <div class="uc-line">
+                                                            <div></div>
+                                                        </div>
+                                                        <li class="dropListEMUI5_li   isLineUnable-false">6</li>
+                                                        <div class="uc-line">
+                                                            <div></div>
+                                                        </div>
+                                                        <li class="dropListEMUI5_li   isLineUnable-false">7</li>
+                                                        <div class="uc-line">
+                                                            <div></div>
+                                                        </div>
+                                                        <li class="dropListEMUI5_li   isLineUnable-false">8</li>
+                                                        <div class="uc-line">
+                                                            <div></div>
+                                                        </div>
+                                                        <li class="dropListEMUI5_li   isLineUnable-false">9</li>
+                                                        <div class="uc-line">
+                                                            <div></div>
+                                                        </div>
+                                                        <li class="dropListEMUI5_li   isLineUnable-false">10</li>
+                                                        <div class="uc-line">
+                                                            <div></div>
+                                                        </div>
+                                                        <li class="dropListEMUI5_li   isLineUnable-false">11</li>
+                                                        <div class="uc-line">
+                                                            <div></div>
+                                                        </div>
+                                                        <li class="dropListEMUI5_li   isLineUnable-false">12</li>
+                                                        <div class="uc-line">
+                                                            <div></div>
+                                                        </div>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="helpTipBox" style="right: -24px;">
+                                <div class="helpTip visib-hidden">
+                                    <div class="guide_bg" style="left: 35px; top: -22.5px;">您的出生日期用于确定您在法律范围内可以使用的服务</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 注册按钮开始 -->
+                        <div class="reg-btn" align="center">
+                            <input type="submit" class="btn btn-reg sel" id="btnSubmit" value="注册" name="submit">
+                        </div>
+                        <!-- 注册按钮结束 -->
+                        <!-- 出生日期结束 -->
+                    </div>
+                    <!-- 密码结束 -->
+                </form>
+            </div>
+            <div class="box-shadow"></div>
+            <!-- 底部 -->
+            <div class="wp1 ft">
+                <div class="reg-content">
+                    <p class="footer">
+                        <a href="" id="foot_EULA" class="rule">华为帐号与云空间用户协议</a>
+                        <em class="foot_em">|</em>
+                        <a href="" id="foot_privacy" class="rule">关于华为帐号与云空间隐私的声明</a>
+                        <span id="faqPart" class="foot_em">
+                                <em>|</em>
+                                <a href="" style="padding:0 10px;">常见问题</a>
+                            </span>
+                        <span id="cookieBox">
+                                <em class="foot_em">|</em>
+                                <a href="" id="foot_cookies" class="rule">Cookies</a>
+                            </span>
+                    </p>
+                    <p id="copyrightPart" class="footer">Copyright © 2011-2019 华为软件技术有限公司 版权所有 保留一切权利 苏B2-20070200号 | 苏ICP备09062682号-9</p>
+                </div>
+            </div>
+            <!-- 注册华为账号结束 -->
+        </div>
+    </div>
+    <script>
+        $(function() {
+            var oInput = $('input')
+            var oSpan = $('.select-ico')
+            oInput[3].onfocus = function() {
+                oSpan[0].innerHTML = '请输入11位手机号码';
+                oSpan[0].style.color = '#ccc';
+
+            }
+            oInput[3].onblur = function() {
+                if (this.value != '') {
+                    var reg = /^1[35678]\d{9}$/;
+                    if (reg.test(this.value)) {
+                        oSpan[0].innerHTML = '正确';
+                        oSpan[0].style.color = 'green';
+                    } else {
+                        oSpan[0].innerHTML = '手机号码输入有误';
+                        oSpan[0].style.color = 'red';
+                    }
+                } else {
+                    oSpan[0].innerHTML = '手机号码不能为空';
+                    oSpan[0].style.color = 'red';
+                }
+            }
+            oInput[6].onfocus = function() {
+                oSpan[1].innerHTML = '请输入6-16位以字母开头的用户名';
+                oSpan[1].style.color = '#ccc';
+            }
+            oInput[6].onblur = function() {
+                if (this.value != '') {
+                    var reg = /^[a-zA-Z]\w{5,15}$/;
+                    if (reg.test(this.value)) {
+                        oSpan[1].innerHTML = '正确';
+                        oSpan[1].style.color = 'green';
+                    } else {
+                        oSpan[1].innerHTML = '用户名输入有误';
+                        oSpan[1].style.color = 'red';
+                    }
+                } else {
+                    oSpan[0].innerHTML = '用户名不能为空';
+                    oSpan[0].style.color = 'red';
+                }
+            }
+            oInput[7].onfocus = function() {
+                oSpan[2].innerHTML = '请输入6-12位由数字字母和下划线组成的密码';
+                oSpan[2].style.color = '#ccc'
+            }
+            oInput[7].onblur = function() {
+                if (this.value != '') {
+                    var reg = /^\w{6,12}$/;
+                    if (reg.test(this.value)) {
+                        oSpan[2].innerHTML = '正确';
+                        oSpan[2].style.color = 'green';
+                    } else {
+                        oSpan[2].innerHTML = '输入的用户密码错误';
+                        oSpan[2].style.color = 'red'
+                    }
+                } else {
+                    oSpan[2].innerHTML = '用户密码不能为空';
+                    oSpan[2].style.color = 'red'
+                }
+            }
+            oInput[7].oninput = function() {
+                if (this.value.length >= 6 && this.value.length <= 12) {
+                    var reg = /\d+/;
+                    var reg1 = /[A-Z]+/;
+                    var reg2 = /[a-z]+/;
+                    var reg3 = /[_]+/;
+                    var num = 0;
+                    if (reg.test(this.value)) {
+                        num++;
+                    }
+                    if (reg1.test(this.value)) {
+                        num++;
+                    }
+                    if (reg2.test(this.value)) {
+                        num++;
+                    }
+                    if (reg3.test(this.value)) {
+                        num++;
+                    }
+                }
+            }
+            oInput[8].onfocus = function() {
+                oSpan[3].innerHTML = '请把密码再输入一遍';
+                oSpan[3].style.color = '#ccc'
+            }
+            oInput[8].onblur = function() {
+                if (this.value != '') {
+                    if (this.value != oInput[7].value) {
+                        oSpan[3].innerHTML = '两次输入的密码不一致';
+                        oSpan[3].style.color = 'red'
+                    } else {
+                        oSpan[3].innerHTML = '正确';
+                        oSpan[3].style.color = 'green'
+                    }
+                } else {
+                    oSpan[3].innerHTML = '密码不能为空';
+                    oSpan[3].style.color = 'red'
+                }
+            }
+        })
+    </script>
+
+
+
+</body>
+
+</html>

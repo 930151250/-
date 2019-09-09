@@ -1,0 +1,90 @@
+.ol_box {
+    background-color: #FFF;
+    overflow: visible;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    div {
+        overflow: visible;
+    }
+    .box-header {
+        position: relative;
+        padding-bottom: 4px;
+        background-position: 0 2px;
+        .box-close {
+            display: block;
+            height: 11px;
+            padding-left: 12px;
+            background-position: -148px 0;
+            line-height: 1px;
+            position: absolute;
+            right: 10px;
+            top: 9px;
+        }
+    }
+    .box-tl,
+    .ol_box .box-tr {
+        position: absolute;
+        width: 2px;
+        height: 4px;
+        font-size: 1px;
+        line-height: 1px;
+        top: 30px;
+    }
+    .box-tc {
+        cursor: move;
+        height: 28px;
+        line-height: 28px;
+        border: 1px solid #a51b1b;
+        background: 0;
+        background: #a51b1b;
+    }
+    .box-title {
+        font-size: 14px;
+        font-weight: 700;
+        color: #FFF;
+        margin-left: 14px;
+    }
+    .box-tr {
+        background-position: right -28px;
+        right: 0;
+    }
+    .box-cr {
+        display: none;
+    }
+    .box-cc {
+        vertical-align: top;
+    }
+    .box-content {
+        clear: both;
+        border: 1px solid #EEE;
+        border-top: 0 none;
+    }
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    display: table;
+    border-color: grey;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 8px;
+    color: #717171;
+    a {
+        color: #267eff;
+        text-decoration: underline;
+    }
+}

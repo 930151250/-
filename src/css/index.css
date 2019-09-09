@@ -1,0 +1,660 @@
+/* .top-banner-min hide {
+            display: block;
+            background-color: rgba(0, 0, 0, 0);
+            overflow: hidden;
+        }
+        
+        .top-banner-img {
+            width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .button-top-banner-min {
+            text-indent: 100%;
+            white-space: nowrap;
+            background-position: -323px -108px;
+        }
+        
+        .button-top-banner-max,
+        .button-top-banner-min,
+        .button-top-banner-close {
+            position: absolute;
+            right: 0;
+            top: 10px;
+            width: 24px;
+            height: 24px;
+            color: #FFF;
+            overflow: hidden;
+        }
+        
+        .top-banner-img {
+            display: block;
+            position: relative;
+            width: 1920px;
+            text-align: center;
+            left: 50%;
+            margin-left: -960px;
+        }
+        
+        .top-banner-min hide {
+            display: block;
+            background-color: rgba(0, 0, 0, 0);
+            overflow: hidden;
+        }
+        
+        .top-banner-img {
+            width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .top-banner-img img {
+            vertical-align: top;
+            text-align: center;
+        } */
+
+
+/* 顶部banner结束 没做完 */
+
+
+/* 头部导航开始 */
+
+.shortcut {
+    min-width: 1200px;
+    height: 36px;
+    line-height: 36px;
+    background-color: #f9f9f9;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+    position: relative;
+    z-index: 411;
+}
+
+.layout {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.shortcut .s-sub {
+    float: left;
+}
+
+.shortcut .s-sub a:hover {
+    color: #ca151d;
+}
+
+.shortcut li {
+    float: left;
+    padding: 0 8px;
+    position: relative;
+}
+
+.shortcut li:before {
+    content: "";
+    width: 1px;
+    height: 10px;
+    display: block;
+    position: absolute;
+    top: 13px;
+    left: 0;
+    background: #d3d3d3;
+}
+
+.shortcut a {
+    color: #a4a4a4;
+}
+
+.shortcut .s-dropdown {
+    position: relative;
+    z-index: 310;
+    margin: 0 -9px;
+    height: 36px;
+}
+
+.shortcut .s-dropdown:hover {
+    margin: 0 -9px;
+    box-shadow: 0 2px 36px 0 rgba(0, 0, 0, 0.07);
+    z-index: 311;
+}
+
+.shortcut .s-dropdown:hover .h {
+    background: #fff;
+    z-index: 100;
+    position: relative;
+    padding: 0 12px 0 10px;
+    height: 36px;
+}
+
+.shortcut .s-dropdown:hover .h a {
+    position: relative;
+    color: #cb242b;
+}
+
+.shortcut .s-dropdown:hover .icon-dropdown:before {
+    background-position: -85px 0;
+}
+
+.shortcut .s-dropdown .h {
+    position: relative;
+    padding: 0 12px 0 10px;
+    height: 36px;
+}
+
+.shortcut .s-dropdown .icon-dropdown {
+    position: relative;
+    padding-right: 10px;
+}
+
+.shortcut .s-dropdown .icon-dropdown:before {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 14px;
+    background-position: -71px 0;
+    position: absolute;
+    top: 0;
+    right: -5px;
+}
+
+.shortcut .s-dropdown .icon-dropdown:before {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 14px;
+    background: url(../img/icon-common.svg) no-repeat;
+    background-position: -71px 0;
+    position: absolute;
+    top: 0;
+    right: -5px;
+}
+
+.shortcut .s-dropdown:hover .b {
+    display: block;
+}
+
+.shortcut .s-dropdown .b {
+    display: none;
+    position: absolute;
+    top: 36px;
+    right: 0;
+    background: #fff;
+    box-shadow: 0 2px 36px 0 rgba(0, 0, 0, 0.07);
+    border-radius: 8px 0 8px 8px;
+}
+
+.shortcut .dropdown-more {
+    width: 80px;
+    padding: 6px 0 12px 0;
+    text-align: center;
+    line-height: 32px;
+}
+
+.shortcut .dropdown-more.w-119 {
+    width: 119px;
+    padding: 6px 0 12px 0;
+    text-align: center;
+    line-height: 32px;
+}
+
+dt {
+    display: block;
+}
+
+.shortcut .dropdown-more a {
+    color: #777;
+}
+
+.shortcut .dropdown-more a:hover {
+    color: #ca151d;
+}
+
+
+/* 头部导航登陆注册 */
+
+.shortcut .s-main {
+    float: right;
+}
+
+.shortcut li {
+    float: left;
+    padding: 0 8px;
+    position: relative;
+}
+
+.shortcut li:before {
+    content: "";
+    width: 1px;
+    height: 10px;
+    display: block;
+    position: absolute;
+    top: 13px;
+    left: 0;
+    background: #d3d3d3;
+}
+
+.shortcut li:first-child:before {
+    display: none;
+}
+
+.shortcut a {
+    color: #a4a4a4;
+}
+
+.shortcut .s-dropdown:hover {
+    margin: 0 -9px;
+    box-shadow: 0 2px 36px 0 rgba(0, 0, 0, 0.07);
+    z-index: 311;
+}
+
+.shortcut .s-dropdown .h {
+    position: relative;
+    padding: 0 12px 0 10px;
+    height: 36px;
+}
+
+.shortcut .s-dropdown:hover .h {
+    background: #fff;
+    z-index: 100;
+    position: relative;
+    padding: 0 12px 0 10px;
+    height: 36px;
+}
+
+.shortcut .s-dropdown:hover .h a {
+    position: relative;
+    color: #cb242b;
+}
+
+.shortcut .s-dropdown .icon-dropdown {
+    position: relative;
+    padding-right: 10px;
+}
+
+.shortcut .s-dropdown .icon-dropdown:before {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 14px;
+    background-position: -71px 0;
+    position: absolute;
+    top: 0;
+    right: -5px;
+}
+
+.shortcut .s-dropdown:hover .b {
+    display: block;
+    position: absolute;
+    top: 36px;
+    right: 0;
+    background: #fff;
+    box-shadow: 0 2px 36px 0 rgba(0, 0, 0, 0.07);
+    border-radius: 0 0 8px 8px;
+}
+
+.shortcut .dropdown-more {
+    width: 80px;
+    padding: 6px 0 12px 0;
+    text-align: center;
+    line-height: 32px;
+}
+
+.shortcut .dropdown-more a {
+    color: #777;
+}
+
+.shortcut .s-dropdown .icon-dropdown:before {
+    content: "";
+    width: 0;
+    height: 0;
+    display: block;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #777;
+    position: absolute;
+    top: 5px;
+    right: -5px;
+}
+
+.shortcut .s-dropdown .h {
+    position: relative;
+    padding: 0 12px 0 10px;
+    height: 40px;
+}
+
+
+/* 手机版 */
+
+
+/* 购物车 */
+
+.shortcut .s-dropdown-minicart {
+    background: #f2f2f2;
+}
+
+.shortcut .s-dropdown .icon-minicart {
+    position: relative;
+    padding-left: 18px;
+}
+
+.shortcut .s-dropdown .icon-minicart:before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    display: block;
+    position: absolute;
+    top: -1px;
+    left: 0;
+    background: url(../img/icon-header.png) no-repeat;
+}
+
+
+/* VMALLxHUAWEI开始  */
+
+.nav-home {
+    min-width: 1200px;
+    height: 41px;
+    padding: 18px 0 15px 0;
+    background: #fff;
+    position: relative;
+    line-height: 1.5;
+    box-shadow: 0 0 46px rgba(0, 0, 0, 0.03)
+}
+
+.layout {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.layout .left {
+    float: left;
+}
+
+.nav-home .logo {
+    float: left;
+    margin-right: 40px;
+    width: 240px;
+    height: 50px;
+}
+
+.nav-home .logo a {
+    float: left;
+    color: #333;
+}
+
+.nav-home .logo img {
+    height: 36px;
+    vertical-align: top;
+}
+
+.layout .left em {
+    width: 11px;
+    height: 10px;
+    float: left;
+    margin: 0 5px;
+    margin-top: 14px;
+    background: url(../img/icon-header.png) no-repeat;
+    background-position: -22px -149px;
+}
+
+
+/* logo结束 */
+
+
+/* 导航开始 */
+
+.layout .left .naver {
+    float: left;
+    max-width: 560px;
+    height: 40px;
+    overflow: hidden;
+}
+
+.nav-home .naver li {
+    float: left;
+    margin-right: 20px;
+}
+
+.nav-home .naver a {
+    font-size: 16px;
+    color: #3a3a3a;
+    position: relative;
+    line-height: 40px;
+    display: block;
+}
+
+
+/* 导航结束 */
+
+
+/* 搜索栏开始 */
+
+.layout .right {
+    float: right;
+}
+
+.nav-home .search-bar {
+    margin-top: 5px;
+    background: #fff;
+    border-radius: 16px 16px 0 0;
+    position: relative;
+}
+
+.nav-home .search-bar .search-bar-form {
+    width: 318px;
+    height: 28px;
+    background: #f0f0f0;
+    border: 1px solid #f0f0f0;
+    border-radius: 15px;
+    position: relative;
+    z-index: 310
+}
+
+.nav-home .search-bar .search-bar-form:after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url(https://res8.vmallres.com/20190630/images/echannel/icon/icon-common.svg) no-repeat;
+    background-position: -139px 0;
+    position: absolute;
+    top: 4px;
+    right: 12px;
+}
+
+.nav-home .search-bar .search-bar-form .text {
+    color: #3a3a3a;
+    width: 285px;
+    text-indent: 15px;
+    height: 30px;
+    line-height: 30px;
+    background: transparent;
+    float: left;
+}
+
+.nav-home .search-bar .search-bar-form .button {
+    width: 35px;
+    height: 30px;
+    cursor: pointer;
+    border: 0;
+    overflow: hidden;
+    position: absolute;
+    background: transparent;
+    padding-right: 10px;
+    right: 0;
+    top: 0;
+    color: #353535;
+    font-size: 0;
+    z-index: 10;
+}
+
+.search-bar-history {
+    background: #fff;
+    width: 320px;
+    border-radius: 8px;
+    position: absolute;
+    top: 40px;
+    line-height: 26px;
+    z-index: 306;
+    box-shadow: 0 2px 36px 0 rgba(0, 0, 0, 0.07);
+}
+
+.search-bar-history ul {
+    text-indent: 15px;
+}
+
+.search-bar-history ul li {
+    padding-right: 17px
+}
+
+.search-bar-history ul li a {
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: #333;
+    height: 30px;
+    line-height: 30px;
+}
+
+.search-bar-history p {
+    text-indent: 15px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.search-bar-history label {
+    font-size: 13px;
+    color: #888;
+}
+
+.search-bar-history .con {
+    border-top: 1px solid #f2f2f5;
+}
+
+.c-banner {
+    width: 100%;
+    position: relative;
+    height: 550px;
+}
+
+.c-banner img {
+    width: 100%;
+}
+
+.c-banner .banner {
+    width: 100%;
+    height: 550px;
+    position: relative;
+    overflow: hidden;
+}
+
+.c-banner .mask {
+    text-align: center;
+    width: 100%;
+    min-width: 1200px;
+    height: 72px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+}
+
+.mask span {
+    width: 100%;
+    min-width: 1200px;
+    height: 72px;
+    display: block;
+    background: url(https://res.vmallres.com/20190630/images/echannel/bg/bg-slide.png) no-repeat;
+    background-size: 100% 72px;
+}
+
+.c-banner .banner ul {
+    list-style: none;
+    padding-left: 0px;
+    margin-bottom: 0px;
+}
+
+.c-banner .banner ul li {
+    position: absolute;
+    display: none;
+    opacity: 0;
+    width: 100%;
+}
+
+.c-banner .banner ul li:nth-child(1) {
+    opacity: 1;
+    display: block;
+}
+
+.c-banner .banner ul li img {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    height: 550px;
+}
+
+.c-banner .banner ul li:first-child img {
+    position: relative;
+}
+
+.c-banner .nexImg,
+.c-banner .preImg {
+    padding: 25px 10px 25px 10px;
+    position: absolute;
+    top: 50%;
+    margin-top: -53px;
+    background: #000000;
+    opacity: 0.5;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.c-banner .nexImg:hover,
+.c-banner .preImg:hover {
+    opacity: 0.8;
+}
+
+.c-banner .nexImg {
+    right: 0px;
+}
+
+.c-banner .jumpBtn {
+    position: absolute;
+    bottom: 80px;
+    text-align: center;
+    right: 170px
+}
+
+.c-banner .jumpBtn ul {
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
+.c-banner .jumpBtn ul li {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: white;
+    opacity: 0.9;
+    margin-left: 10px;
+}
+
+.c-banner .jumpBtn ul li:first-child {
+    margin-left: 0px;
+}
+
+@media screen and (max-width:768px) {
+    .c-banner {
+        width: 100%;
+        height: 345px;
+        overflow: hidden;
+    }
+    .c-banner .banner ul li img {
+        width: 768px;
+        height: 345px;
+        position: absolute;
+        left: 50%;
+        margin-left: -384px;
+    }
+}

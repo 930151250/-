@@ -1,0 +1,218 @@
+@charset 'utf-8';
+@import './i-public.scss';
+// 头部 我的购物车开始
+.order-header {
+    box-shadow: none;
+}
+
+.header {
+    min-width: 1200px;
+    height: 50px;
+    padding: 10px 0;
+    background: #fff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .04);
+    position: relative;
+    font-family: Helvetica Neue, Helvetica, Arial, Microsoft Yahei, Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif;
+    line-height: 1.5;
+}
+
+.order-header .logo-word {
+    margin-top: 8px;
+    width: auto;
+    height: auto;
+}
+
+.logo {
+    float: left;
+    margin-right: 34px;
+    a {
+        float: left;
+    }
+    img {
+        height: 36px;
+    }
+}
+
+.logo-word img {
+    width: 120px;
+}
+
+.logo-word span {
+    margin-left: 26px;
+    font-size: 22px;
+    line-height: 36px;
+}
+
+.progress-area {
+    margin-top: 2px;
+}
+
+.progress-area-3 .progress-sc-area {
+    background-position: -42px -22px;
+}
+
+.progress-area div {
+    width: 320px;
+    height: 50px;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+
+.progress-area div {
+    background: transparent url(../img/sprites6.806df78.svg) no-repeat;
+}
+
+// 头部 我的购物车结束
+// 全选按钮开始
+.sc-pro-title {
+    background: #fff;
+    line-height: 40px;
+    padding-left: 40px;
+    color: #a4a4a4;
+    label {
+        float: left;
+        width: 150px;
+    }
+}
+
+.checkbox input {
+    background: url(../img/icon-header.png) no-repeat;
+    border: 0 none;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-position: -18px -129px;
+    vertical-align: text-top;
+    color: rgba(255, 255, 255, 0);
+    cursor: default;
+    font-size: 0;
+    margin-right: 10px;
+}
+
+.sc-pro-title {
+    background: #fff;
+    line-height: 40px;
+    padding-left: 40px;
+    color: #a4a4a4;
+    li {
+        float: left;
+        width: 100px;
+        margin-left: 30px;
+        min-height: 14px;
+        text-align: center;
+    }
+}
+
+.sc-pro-title li:first-child {
+    width: 450px;
+    text-align: left;
+    margin-left: 0;
+}
+
+// 全选按钮结束
+// 立即结算开始
+.sc-total-tool {
+    background: #fff;
+    height: 60px;
+    margin-top: 10px;
+    .sc-total-control {
+        float: left;
+        line-height: 60px;
+        a {
+            float: left;
+            margin-left: 20px;
+        }
+    }
+    .sc-total-btn {
+        float: right;
+        a {
+            width: 180px;
+            height: 60px;
+            line-height: 60px;
+            display: block;
+            background: #ca151e;
+            font-size: 18px;
+            color: #fff;
+            text-align: center;
+        }
+    }
+    .sc-total-price {
+        float: right;
+        padding-right: 30px;
+        margin-top: 7px;
+        text-align: right;
+        .total-choose {
+            color: #a4a4a4;
+            span {
+                color: #3a3a3a;
+            }
+            em {
+                color: #ca151e;
+                margin: 0 5px;
+                font-weight: 700;
+                font-style: normal;
+            }
+        }
+        p {
+            font-size: 14px;
+            position: relative;
+            em {
+                width: 12px;
+                height: 12px;
+                display: block;
+                position: absolute;
+                right: -18px;
+                top: 7px;
+            }
+            span {
+                color: #ca151e;
+                font-size: 18px;
+                font-weight: 700;
+            }
+            b {
+                position: absolute;
+                top: -43px;
+                right: -27px;
+                display: block;
+                width: 48px;
+                background: #fff;
+                border: 1px solid #d6d6d6;
+                font-size: 12px;
+                font-weight: 400;
+                z-index: 10;
+                padding: 5px 8px;
+                box-shadow: 0 2px 5px rgba(99, 99, 99, 0.2);
+                display: none;
+            }
+        }
+    }
+}
+
+.sc-total-tool .sc-total-price p em:before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    display: block;
+    cursor: pointer;
+    background-position: -22px -137px;
+}
+
+.address-add-btn:before,
+.address-sub a:before,
+.discount-btn,
+.order-address-list li.current:after,
+.order-discount .order-coupon:before,
+.order-roll-detail.current .order-roll-time:after,
+.order-total-activity i:after,
+.order-total-info b:before,
+.order-total-info em:before,
+.p-price-save:before,
+.sc-total-price p b:after,
+.sc-total-price p em:before,
+.whole-prompt-btn:before,
+.whole-prompt:before {
+    background: url(../img/icon-header.png) no-repeat;
+}
+
+// 立即结算结束

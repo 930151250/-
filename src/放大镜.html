@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            bottom: 0;
+        }
+        
+        .wrap {
+            position: relative;
+            margin-left: 30px;
+        }
+        
+        .smallpic {
+            width: 300px;
+            height: 300px;
+            float: left;
+            position: relative;
+        }
+        
+        .smallpic img {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .df {
+            width: 450px;
+            height: 450px;
+            float: left;
+            border: 1px solid black;
+            overflow: hidden;
+            position: relative;
+            visibility: hidden
+        }
+        
+        .bigpic {
+            width: 600px;
+            height: 600px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        .show {
+            visibility: visible
+        }
+        
+        .hide {
+            visibility: hidden
+        }
+        
+        .xf {
+            background: lightgreen;
+            opacity: .5;
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* width: 200px;
+            height: 200px; */
+            display: none;
+            cursor: pointer
+        }
+    </style>
+    <!-- <script src="./js/jquery.min.js"></script> -->
+    <script src="./js/public.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="smallpic">
+            <img src="./img/a01-1.jpg" alt="">
+            <div class="xf"></div>
+        </div>
+        <div class="df">
+            <img src="./img/a01-1.jpg" alt="" class="bigpic">
+        </div>
+
+    </div>
+
+    <script>
+        $(function() {
+            const wrap = $('.wrap');
+            const smallpic = $('.smallpic');
+            const xf = $('.xf');
+            const df = $('.df');
+            const bigpic = $('.bigpic');
+
+            smallpic.on('mouseover', function() {
+                xf.removeClass('hide').addClass('show');
+                df.removeClass('hide').addClass('show');
+                xf.css({
+                        width: smallpic.offset().width * df.offset().width / bigpic.offset().width,
+                        height: smallpic.offset().height * df.offset().height / bigpic.offset().height,
+
+
+                    })
+                    // console.log(xf.offset().height)
+                samllpic.on('mousemove', function(ev) {
+                    ev = ev || window.event;
+                    var left = ev.clientX - wrap.offset().left - xf.offset().width / 2;
+                    var top = ev.clientY - wrap.offset().top - xf.offset().height / 2;
+                    if (left < 0) {
+                        left = 0
+                    } else if (left >= smallpic.offset().width - xf.offset().width) {
+                        left = smallpic.offset().width - xf.offset().width
+                    }
+                    if (top < 0) {
+                        top = 0
+                    } else if (top >= smallpic.offset().height - xf.offset().height) {
+                        top = smallpic.offset().height - xf.offset().height
+                    }
+                    var ratio = bigpic.offset().width / smallpic.offset().width //比例
+                    xf.css({
+                        'left': left + 'px',
+                        'top': top + 'px'
+                    })
+                    bigpic.css({
+                        'left': left * ratio + 'px',
+                        'top': top * ratio + 'px'
+                    })
+                })
+
+            })
+            smallpic.on('mouseout', function() {
+                xf.removeClass('show').addClass('hide');
+                df.removeClass('show').addClass('hide')
+            })
+        })
+    </script>
+</body>
+
+</html>
